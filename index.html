@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dde373db1.js" crossorigin="anonymous"></script>
+    <title>Coffee</title>
+</head>
+<body>
+    <div id="app">
+        <div class="section-one">
+            <div class="container">
+                <div class="nav-bar">
+                    <ul class="nav-bar-inner">
+                        <li class="nav-item-li"><a href="#" class="nav-item" v-for="item in items">{{ item }}</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-nav-bar">
+                    <a href="#" @click="menuHamburger = !menuHamburger"><i class="fas fa-bars"></i></a>
+                </div>
+                <div class="modal-window-menu" v-if="menuHamburger">
+                    <div class="modal-menu-inner">
+                        <ul>
+                            <li class="mobile-bar-li"><a href="#" class="nav-item-mobile" v-for="item in items">{{ item }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="front-text">
+                    <div class="front-text-inner">
+                        <p>Вкуснейшие напитки, только из натуральных зерен</p>
+                        <p>Проведи свободное время с удовольствием</p>
+                        <h1>Лучший Кофе</h1>
+                        <div class="catalog-btn">
+                            <a href="#">Каталог</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee-bar">
+                    <div class="coffee-bar-inner">
+                        <div class="coffee-bar-two-panel">
+                            <div class="left-bar">
+                                <div class="left-bar-inner">
+                                    <span></span>
+                                    <p>Недавние покупки</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coffee-list-bar">
+                            <div class="coffee-list-bar-item">
+                                <div class="coffee-item-inner">
+                                    <div class="coffee-items-info">
+                                        <p>Американо</p>
+                                        <img src="img/img[0].png" alt="" />
+                                        <h1>45 грн</h1>
+                                        <div class="select-coffee-button">
+                                            <a href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="coffee-list-bar-item">
+                                <div class="coffee-item-inner">
+                                    <div class="coffee-items-info">
+                                        <p>Капучино</p>
+                                        <img src="img/img[1].png" alt="" />
+                                        <h1>50 грн</h1>
+                                        <div class="select-coffee-button">
+                                            <a href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="coffee-list-bar-item">
+                                <div class="coffee-item-inner">
+                                    <div class="coffee-items-info">
+                                        <p>Макиато</p>
+                                        <img src="img/img[2].png" alt="" />
+                                        <h1>45 грн</h1>
+                                        <div class="select-coffee-button">
+                                            <a href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="coffee-list-bar-item">
+                                <div class="coffee-item-inner">
+                                    <div class="coffee-items-info">
+                                        <p>Моккачино</p>
+                                        <img src="img/img[3].png" alt="" />
+                                        <h1>45 грн</h1>
+                                        <div class="select-coffee-button">
+                                            <a href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee-bar-two">
+                    <div class="coffee-bar-two-panel">
+                        <div class="left-bar">
+                            <div class="left-bar-inner">
+                                <span></span>
+                                <p>Топ напитков</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coffee-list-bar">
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Американо</p>
+                                    <img src="img/img[0].png" alt="" />
+                                    <h1>45 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Капучино</p>
+                                    <img src="img/img[1].png" alt="" />
+                                    <h1>50 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Макиато</p>
+                                    <img src="img/img[2].png" alt="" />
+                                    <h1>45 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Моккачино</p>
+                                    <img src="img/img[3].png" alt="" />
+                                    <h1>45 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee-bar-three">
+                    <div class="coffee-bar-two-panel">
+                        <div class="left-bar">
+                            <div class="left-bar-inner">
+                                <span></span>
+                                <p>Новинки</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coffee-list-bar">
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Американо</p>
+                                    <img src="img/img[0].png" alt="" />
+                                    <h1>45 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Капучино</p>
+                                    <img src="img/img[1].png" alt="" />
+                                    <h1>50 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Макиато</p>
+                                    <img src="img/img[2].png" alt="" />
+                                    <h1>45 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Моккачино</p>
+                                    <img src="img/img[3].png" alt="" />
+                                    <h1>45 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee-bar-four">
+                    <div class="coffee-bar-two-panel">
+                        <div class="left-bar">
+                            <div class="left-bar-inner">
+                                <span></span>
+                                <p>Акции</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coffee-list-bar">
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Американо</p>
+                                    <img src="img/img[0].png" alt="" />
+                                    <h1>45 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Капучино</p>
+                                    <img src="img/img[1].png" alt="" />
+                                    <h1>50 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Макиато</p>
+                                    <img src="img/img[2].png" alt="" />
+                                    <h1>45 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coffee-list-bar-item">
+                            <div class="coffee-item-inner">
+                                <div class="coffee-items-info">
+                                    <p>Моккачино</p>
+                                    <img src="img/img[3].png" alt="" />
+                                    <h1>45 грн</h1>
+                                    <div class="select-coffee-button">
+                                        <a href="#" @click="menuBuyCoffee = !menuBuyCoffee">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bar">
+                    <div class="footer-bar-inner">
+                        <div class="footer-text">
+                            <p>Обратная связь</p>
+                        </div>
+                        <div class="input-email">
+                            <input type="email" name="name" placeholder="tempemail@gmail.com" />
+                        </div>
+                        <div class="input-name">
+                            <input type="text" name="name" placeholder="Ваше имя" />
+                        </div>
+                        <div class="input-text">
+                            <input type="text" name="name" placeholder="Ваше обращение" />
+                        </div>
+                        <div class="support-btn">
+                            <a href="#">Отправить обращение</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/javascript" src="js/script.js" charset="windows-1251"></script>
+</body>
+</html>
